@@ -2,7 +2,7 @@ from pydantic import BaseModel
 
 
 class UserCreate(BaseModel):
-    user_id: int
+    user_id: str
     age: int
     gender: str
     name: str

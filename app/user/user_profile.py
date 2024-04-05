@@ -3,7 +3,7 @@ from ..opt_model.stabilization.stabilization_endurance import StabilizationEndur
 
 
 class UserProfile(User):
-    def __init__(self, user_id: int, age: int, gender: str, name: str, email: str, password: str,
+    def __init__(self, user_id: str, age: int, gender: str, name: str, email: str, password: str,
                  workout_history: list[str], fitness_level: str, fitness_goals: str = "General Health",
                  preferences: dict[str, int] = None, medical_conditions=None, weight: float = None, height: float = None):
         super().__init__(user_id, age, gender, name, email, password)

@@ -9,12 +9,12 @@ class User:
     - password (str): The user password chosen by the user.
     """
 
-    def __init__(self, user_id: int, age: int, gender: str, name: str, email: str, password: str):
+    def __init__(self, user_id: str, age: int, gender: str, name: str, email: str, password: str):
         """
         Initialize a new User instance.
 
         Parameters:
-        - user_id (int): The unique identifier for the user.
+        - user_id (str): The unique identifier for the user.
         - username (str): The username chosen by the user.
         """
         self.user_id = user_id
@@ -23,7 +23,6 @@ class User:
         self.name = name
         self.email = email
         self.password = password
-
 
     @property
     def user_id(self):
@@ -39,7 +38,7 @@ class User:
 
     @age.setter
     def age(self, new_age):
-        if new_age <0:
+        if new_age < 0:
             raise ValueError("Invalid age")
         self._age = new_age
 

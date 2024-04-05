@@ -1,59 +1,27 @@
-# X_Fit: Empowering fitness with AI.
+# Deploy FastAPI on Render
 
-### Introduction
-X_Fit is a Python-based fitness application designed to guide users towards their fitness goals.
-It provides personalized workout plans and tracks progress using a combination of assessments, rule-based recommendations, and machine learning models.
+Use this repo as a template to deploy a Python [FastAPI](https://fastapi.tiangolo.com) service on Render.
 
-### Features
-Individualized Assessments: Assess fitness level, identify strengths and weaknesses, and recommend appropriate workout phases.
-OPT Model Implementation: Structures workout phases based on the Optimum Performance Training (OPT) model principles.
-Personalized Workouts: Generates customized workout plans tailored to individual goals, preferences, and fitness levels.
-Progress Tracking: Monitor your progress and make adjustments to the workout plan as needed.
-Variety of Training Types: Includes flexibility, core, balance, plyometric, SAQ (speed, agility, quickness), and resistance training.
-Installation
+See https://render.com/docs/deploy-fastapi or follow the steps below:
 
+## Manual Steps
 
-### Clone the repository:
-git clone https://github.com/your-username/X_Fit.git
-Use code with caution.
+1. You may use this repository directly or [create your own repository from this template](https://github.com/render-examples/fastapi/generate) if you'd like to customize the code.
+2. Create a new Web Service on Render.
+3. Specify the URL to your new repository or this repository.
+4. Render will automatically detect that you are deploying a Python service and use `pip` to download the dependencies.
+5. Specify the following as the Start Command.
 
+    ```shell
+    uvicorn main:app --host 0.0.0.0 --port $PORT
+    ```
 
+6. Click Create Web Service.
 
-Install dependencies:
-pip install -r requirements.txt
-Use code with caution.
+Or simply click:
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/render-examples/fastapi)
 
+## Thanks
 
-Run the main script:
-python src/main.py
-Use code with caution.
-
-Follow the prompts: Provide your information and complete the initial assessment.
-Receive your personalized workout plan: Review the plan and start working towards your goals.
-Track your progress: Log your workouts and monitor your improvements over time.
-
-### Contributing
-This project is currently not open source for contributions.
-
-### Documentation
-The project's documentation is available within this README and the code comments. A more comprehensive documentation may be added in the future.
-
-### License
-The project's license is not yet defined.
-
-### Acknowledgements
-We thank the developers of the libraries used in this project, including pandas, scikit-learn, and pymongo.
-
-### Contact
-For any questions or inquiries, please contact [your email address]
-
-### Support
-For support or troubleshooting, please refer to the project's GitHub repository issues page.
-
-Develop a graphical user interface for improved usability.
-Implement machine learning models for more advanced workout recommendations.
-Expand exercise database and offer a wider range of workout options.
-Integrate with wearable devices and fitness trackers for data collection.
-Changelog
-v1.0.0: Initial release with core functionalities.
+Thanks to [Harish](https://harishgarg.com) for the [inspiration to create a FastAPI quickstart for Render](https://twitter.com/harishkgarg/status/1435084018677010434) and for some sample code!
